@@ -1,6 +1,6 @@
 # Historical fisheries extraction
 
-Reproducible development of a quantitative extraction pipeline for historical Irish fisheries PDF reports.
+Reproducible development of a quantitative extraction pipeline for historical fisheries PDF reports.
 
 ## Getting started
 1. Read `PROJECT_CONTEXT.md`, `EXTRACTION_RULES.md`, and `DECISION_LOG.md` before modifying prompts or extraction outputs.
