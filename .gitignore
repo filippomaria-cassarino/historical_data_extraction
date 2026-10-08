@@ -1,0 +1,9 @@
+# Original PDFs and generated content (keep locally; version selected examples only)
+data/original_pdfs/*
+data/extracted_text/*
+outputs/raw/*
+outputs/validated/*
+.env
+__pycache__/
+.venv/
+!.gitkeep
