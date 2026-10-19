@@ -1,0 +1,41 @@
+## To initiate the extraction workflow, run the following commands in the console:
+
+# Create a python env ...
+python -m venv .venv
+
+# ... or check if one exists already
+Test-Path .venv\Scripts\python.exe
+
+# Activate it 
+.\.venv\Scripts\Activate.ps1
+
+# Add the OpenAI API key as a variable to your working environment (get key at https://platform.openai.com/api-keys)
+notepad .env # opens the notepad, write OPENAI_API_KEY=your_api_key_here
+
+# Install required packages
+python -m pip install openai python-dotenv pypdf
+
+# Import packages
+python -c "import openai, dotenv, pypdf; print('All packages available')"
+
+# Check if python can read key
+python -c "from dotenv import load_dotenv; import os; load_dotenv(); print('API key found:', bool(os.getenv('OPENAI_API_KEY')))"
+
+# Check if you are initialized correctly as a client
+py 
+
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
+client = OpenAI()
+
+print("OpenAI client initialized successfully!")
+
+exit()
+
+# Run extraction
+python scripts/extract.py --pdf "data/original_pdfs/YOUR_PDF.pdf" --pages "YOUR_PAGES" # pages can be omitted
+
+# Deactivate python environment
+deactivate  

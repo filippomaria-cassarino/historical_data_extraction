@@ -13,3 +13,12 @@
 - Specify how to represent age/size distributions and sample sizes.
 - Validate recall and field accuracy on manually curated pages across reports.
 - Choose exact API model/version, retry policy, and PostgreSQL mapping.
+
+## 14 Oct 2026 - First update
+- table extraction retains most values, but it needs to become more flexible to allow for catch at age/size; maybe edit schema?
+- Tocken consumption is high: reduce data, schema and prompt to a minimum.
+- Entire pdfs cannot be sent. We could break down the text into tematic chunks in txt for the AI and loop the extraction around these. Answer: break into chunks, but keep pdf
+- Appendixes may contain the same information, but more structured
+- Reports contain data from  ultiple years. A year search might avoid useless duplications
+- Some reports have tables shared between pages
+

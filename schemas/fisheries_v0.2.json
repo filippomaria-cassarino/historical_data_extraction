@@ -1,0 +1,45 @@
+{
+  "name": "historical_fisheries_quantitative_v0_2",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "report_title": {"type": ["string", "null"]},
+      "report_year": {"type": ["integer", "null"]},
+      "observations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "variable": {"type": "string", "enum": ["catch", "landings", "abundance", "size", "age", "maturity", "fishing_effort"]},
+            "variable_detail": {"type": ["string", "null"]},
+            "species_reported": {"type": ["string", "null"]},
+            "value_reported": {"type": "string"},
+            "value_numeric": {"type": ["number", "null"]},
+            "value_min": {"type": ["number", "null"]},
+            "value_max": {"type": ["number", "null"]},
+            "unit_reported": {"type": ["string", "null"]},
+            "qualifier_type": {"type": "string", "enum": ["exact", "approximate", "minimum", "maximum", "range", "unknown"]},
+            "time_reported": {"type": ["string", "null"]},
+            "time_type": {"type": "string", "enum": ["date", "month", "year", "season", "interval", "multiple_periods", "other", "unknown"]},
+            "time_start": {"type": ["string", "null"]},
+            "time_end": {"type": ["string", "null"]},
+            "location_reported": {"type": ["string", "null"]},
+            "location_type": {"type": "string", "enum": ["point", "port", "fishing_ground", "bay", "coastal_area", "coastal_stretch", "river", "lake", "administrative_area", "offshore_area", "country", "multiple_locations", "other", "unknown"]},
+            "location_role": {"type": "string", "enum": ["catch_area", "landing_place", "sampling_site", "vessel_base", "effort_area", "other", "unknown"]},
+            "observation_context": {"type": "string", "enum": ["commercial", "scientific_survey", "experimental", "other", "unknown"]},
+            "method_or_gear": {"type": ["string", "null"]},
+            "station_or_haul": {"type": ["string", "null"]},
+            "source_page": {"type": ["string", "null"]},
+            "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+            "extraction_notes": {"type": ["string", "null"]}
+          },
+          "required": ["variable", "variable_detail", "species_reported", "value_reported", "value_numeric", "value_min", "value_max", "unit_reported", "qualifier_type", "time_reported", "time_type", "time_start", "time_end", "location_reported", "location_type", "location_role", "observation_context", "method_or_gear", "station_or_haul", "source_page", "confidence", "extraction_notes"]
+        }
+      }
+    },
+    "required": ["report_title", "report_year", "observations"]
+  }
+}

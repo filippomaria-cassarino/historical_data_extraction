@@ -1,9 +1,17 @@
-# Original PDFs and generated content (keep locally; version selected examples only)
+# Ignore original PDFs and generated content (keep locally; version selected examples only)
 data/original_pdfs/*
 data/extracted_text/*
+
+# Ignore output for now
 outputs/raw/*
 outputs/validated/*
+
+# Protect API credentials
 .env
+
+# Ignore phyton files
 __pycache__/
 .venv/
+
+# Keep folders where this appears, but not their content (data and output)
 !.gitkeep
